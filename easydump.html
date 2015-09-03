@@ -1,0 +1,25 @@
+<head>
+  <title>easydump</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Item List</h1>
+
+    <form class="new-item">
+      <input type="text" name="text" placeholder="Type an item" />
+    </form>
+  </header>
+
+    <ul>
+      {{#each items}}
+        {{> itemDraw}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="itemDraw">
+  <li>{{text}}</li>
+</template>
